@@ -84,3 +84,5 @@ class TaskModelOverDueStatusTests(TestCase):
         self.user = User.objects.create_user(username='test_user', password='12345')
         future_task = create_task_simple(name='task1', completed=False, created_by=self.user, days=-30)
         self.assertIs(future_task.overdue_status(), True)
+
+# TODO tests for Task list
