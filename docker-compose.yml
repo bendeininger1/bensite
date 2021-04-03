@@ -1,0 +1,14 @@
+version: "3"
+volumes:
+  postgres:
+services:
+  postgres:
+    environment:
+    - POSTGRES_DB=django
+    - POSTGRES_USER=django
+    - POSTGRES_PASSWORD=password
+    image: postgres:12
+    ports:
+    - 5432:5432
+    volumes:
+    - postgres:/var/lib/postgresql
