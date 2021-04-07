@@ -18,6 +18,6 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('reminders/', include('reminders.urls')),
+    # include the urls.py file from the to do app
     path('todo/', include('todo.urls')),
 ]
