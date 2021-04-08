@@ -20,4 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # include the urls.py file from the to do app
     path('todo/', include('todo.urls')),
+    # homepage
+    path('', include('homepage.urls')),
 ]
