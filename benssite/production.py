@@ -76,11 +76,11 @@ WSGI_APPLICATION = 'benssite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-# DBHOST is only the server name, not the full URL
-hostname = os.environ['DBHOST']
+# DB_HOST is only the server name, not the full URL
+hostname = os.environ['DB_HOST']
 
 # Configure Postgres database; the full username is username@servername,
-# which we construct using the DBHOST value.
+# which we construct using the DB_HOST value.
 
 DATABASES = {
 
@@ -92,7 +92,7 @@ DATABASES = {
 
         'USER': os.environ['DB_USER'] + "@" + hostname,
 
-        'PASSWORD': os.environ['DBPASS'],
+        'PASSWORD': os.environ['DB_PASS'],
 
         'HOST': hostname + ".postgres.database.azure.com",
 
