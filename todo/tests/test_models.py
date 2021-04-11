@@ -11,6 +11,7 @@ from todo.models import Task
 
 # TODO create test user if does not exist
 
+# TODO create test to confirm that db wont allow creation of tasks without required fields
 
 def create_task_simple(name, completed, created_by, days):
     """

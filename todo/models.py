@@ -23,6 +23,7 @@ class TaskList(models.Model):
         ordering = ['name']
         constraints = [
             # prevents the creation of tasklists with the same name for a given user at the database level
+            # TODO Testing
             UniqueConstraint(fields=['user', 'name'], name='unique_user_tasklist'),
         ]
 
