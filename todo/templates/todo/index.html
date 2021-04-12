@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Required Meta tags -->
     <meta charset="UTF-8">
-    <title>Title</title>
+    {% include "todo/base.html" %}
+
 </head>
+
 <body>
 
+
+
+<main class="container">
 {% if latest_todo_list %}
     <ul>
     {% for task in latest_todo_list %}
@@ -15,5 +21,7 @@
 {% else %}
     <p>No tasks are available.</p>
 {% endif %}
+</main>
+
 </body>
 </html>

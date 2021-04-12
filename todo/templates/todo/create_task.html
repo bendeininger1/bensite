@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Required Meta tags -->
     <meta charset="UTF-8">
-    <title>Create Task</title>
+    {% include "todo/base.html" %}
+
 </head>
+
 <body>
 
 <form action="{% url 'todo:create_task' %}" method="post">
