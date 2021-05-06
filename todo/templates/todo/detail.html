@@ -3,15 +3,16 @@
 <head>
     <!-- Required Meta tags -->
     <meta charset="UTF-8">
-    {% include "todo/base.html" %}
+    {% extends "base.html" %}
 
 </head>
-
+{% block content %}
 <body>
     <h1>{{ task.name }}</h1>
 
     {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
 </body>
+{% endblock %}
 </html>
 </html>

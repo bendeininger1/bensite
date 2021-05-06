@@ -22,4 +22,6 @@ urlpatterns = [
     path('todo/', include('todo.urls')),
     # homepage
     path('', include('homepage.urls')),
+    # Django site authentication
+    path('accounts/', include('django.contrib.auth.urls')),
 ]

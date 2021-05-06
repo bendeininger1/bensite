@@ -3,12 +3,12 @@
 <head>
     <!-- Required Meta tags -->
     <meta charset="UTF-8">
-    {% include "todo/base.html" %}
+    {% extends "base.html" %}
 
 </head>
 
 <body>
-
+{% block content %}
 
 
 <main class="container">
@@ -22,6 +22,6 @@
     <p>No tasks are available.</p>
 {% endif %}
 </main>
-
+{% endblock %}
 </body>
 </html>

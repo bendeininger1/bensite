@@ -4,6 +4,7 @@ from django.urls import reverse
 from django.views import generic
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate, login
 
 from .models import Task
 from .forms import CreateTask
@@ -49,3 +50,17 @@ def create_task(request):
 
 def confirmation_view(request):
     return HttpResponse()
+
+
+def sign_in_view(request):
+    username = request.POST['username']
+    password = request.POST['password']
+    user = authenticate(request,username=username, password=password)
+    if user is not None:
+        login(request, user)
+        # Redircet to a success page.
+    else:
+        x=2
+        # Return invalid login error
+    return render(request, 'todo/sign-in.html')
+

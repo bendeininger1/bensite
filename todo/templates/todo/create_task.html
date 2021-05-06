@@ -3,18 +3,18 @@
 <head>
     <!-- Required Meta tags -->
     <meta charset="UTF-8">
-    {% include "todo/base.html" %}
+    {% extends "base.html" %}
 
 </head>
 
 <body>
-
+{% block content %}
 <form action="{% url 'todo:create_task' %}" method="post">
     {% csrf_token %}
     {{ form }}
     <input type="submit" value="Submit">
 </form>
-
+{% endblock %}
 </body>
 </html>
 

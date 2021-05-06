@@ -3,12 +3,14 @@
 <head>
     <!-- Required Meta tags -->
     <meta charset="UTF-8">
-    {% include "todo/base.html" %}
+    {% extends "base.html" %}
 
 </head>
 
 <body>
+{% block content %}
 <h1>Form Submitted</h1>
 <!-- TODO create verification that tells the user that the data was saved to the db -->
+{% endblock %}
 </body>
 </html>

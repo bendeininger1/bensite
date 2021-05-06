@@ -3,15 +3,16 @@
 <head>
     <!-- Required Meta tags -->
     <meta charset="UTF-8">
-    {% include "homepage/base.html" %}
+    {% extends "base.html" %}
 
 </head>
 
 <body>
-
+{% block content %}
 <main class="container">
 <h1>Help Page</h1>
 {{ help_insert }}
 </main>
+{% endblock %}
 </body>
 </html>
